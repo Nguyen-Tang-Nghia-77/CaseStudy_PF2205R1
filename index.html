@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Snake game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="snake.css">
+</head>
+<style>
+    img {
+        display: none;
+    }
+</style>
+<body >
+    <div class="container">
+        <div class ="Jumbo">
+        <h1>Snake game using JavaScript</h1>
+            
+            <h2 class="btn btn-info"> 
+                
+                Score: <span class ="score"> 0 </span>
+            </h2>
+            
+            <div class="containerCanvas">
+                <canvas id="canvas" width="1000" height="500" class="canvasmain" ></canvas>
+            </div>
+        </div>
+    </div>
+    <img src="img/snake.png" alt="" id="hSnake" width="20px" height="20px">
+    <img src="img/apple.png" alt="" id="apple" width="20px" height="20px">
+    <script src="fruit.js"></script>
+    <script src="snake.js"></script>
+    <script src="draw.js"></script>
+</body>
+</html>

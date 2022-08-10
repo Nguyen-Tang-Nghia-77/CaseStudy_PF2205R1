@@ -62,5 +62,29 @@ function snake(){
         }
     }
     // Hàm ăn mồi
-    
+    this.eat = function(fruit) {
+        if(this.x == fruit.x && this.y == fruit.y){
+            this.score++;
+            eatSound.play();
+            return true;
+        }
+        return false;
+    }
+            
+            
+    // Hàm Va Chạm 
+    this.collision = function() {
+        for(let i=0;i<this.tail.length;i++)
+        {
+            if(this.x == this.tail[i].x && this.y == this.tail[i].y)
+            {
+                this.score=0;
+                this.tail=[];
+                hitSound.play();
+                return true;
+                
+            } 
+            
+        }
+    }
 }

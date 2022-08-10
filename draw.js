@@ -21,3 +21,30 @@ const boxScale = 20;
 //rows và columns
 const rows = canvas.height/boxScale;
 const columns = canvas.width/boxScale;
+
+var snake;
+var fruit;
+(function InitialSetUP() {
+    snake = new snake();
+    fruit = new fruit();
+    fruit.locate();
+    initialInterval = 200;
+
+    const id =window.setInterval( function(){
+        ctx.clearRect(0,0, canvas.width, canvas.height);
+        ctx.fillStyle = grd;
+        ctx.fillRect(0,0,1000,500); 
+        fruit.drawFruit();
+        snake.move();
+        snake.drawSnake();
+    },initialInterval);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+
+        
+        
+}());
+
+  window.addEventListener('keydown', function(event){
+    dirSound.play();
+    let dir = event.key;
+    snake.changeDirection(dir);
+});

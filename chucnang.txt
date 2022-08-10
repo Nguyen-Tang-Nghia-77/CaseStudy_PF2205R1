@@ -1,0 +1,13 @@
+
+chức năng 
++ làm khung để con rắn chạy trong đó
++ Nếu con rắn vượt qua cái khung thì nó sẽ trở ra ở đầu đối diện
++ Làm thức ăn cho con rắn hiện ngẫu nhiên ở từng vị trí trong khung, nếu con rắn ăn thức ăn thì thức ăn ở vị trí đó sẽ 
+mất và chuyển qua vị trí khác
++ Chức năng của con rắn
+    1) Hàm vẽ kích thước
+    2) Hàm di chuyển của con rắn
+    3) Hàm hướng di chuyển
+    4) Hàm ăn mồi 
+    5) Hàm va chạm 
+    

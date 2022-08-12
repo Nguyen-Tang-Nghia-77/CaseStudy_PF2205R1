@@ -1,8 +1,8 @@
 function snake(){
 
     
-    this.x = 0;
-    this.y = 0;
+    this.x = 100;
+    this.y = 120;
     this.xVelocity = boxScale;
     this.yVelocity = 0;
     this.score=0;
@@ -10,18 +10,21 @@ function snake(){
 
     //Vẽ Con rắn có kích thước boxScale 20 * 20
     this.drawSnake = function(){
+        ctx.drawImage(img1, this.x, this.y,);
         for(let i=0; i<this.tail.length; i++){
             ctx.fillRect(this.tail[i].x, this.tail[i].y, boxScale, boxScale);
         }
-        ctx.drawImage(img1, this.x, this.y,);
     }
+            
+        
     // Vẽ đường con rắn di chuyển 
     this.move = function() {
+        
         for(let i=0;i<this.tail.length-1;i++){
             this.tail[i]=this.tail[i+1];
         }
-
-        this.tail[this.score+1] = {x:this.x, y:this.y};
+        this.tail[this.score-1] = {x:this.x, y:this.y};
+        
 
         this.x += this.xVelocity ;
         this.y += this.yVelocity ;

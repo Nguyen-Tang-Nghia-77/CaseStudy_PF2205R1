@@ -37,10 +37,19 @@ var fruit;
         fruit.drawFruit();
         snake.move();
         snake.drawSnake();
-    },initialInterval);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 
-        
-        
+        if(snake.eat(fruit)){
+            fruit.locate();
+            initialInterval-=20;
+        }
+        if(snake.collision()) {
+            clearTimeout(id);
+            ctx.fillStyle = 'yellow';
+            ctx.font = "50px Georgia";
+            ctx.fillText("Game Over", canvas.width/2-100, canvas.height/2);
+        }
+        document.querySelector('.score').innerText=snake.score;
+    },initialInterval);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 }());
 
   window.addEventListener('keydown', function(event){

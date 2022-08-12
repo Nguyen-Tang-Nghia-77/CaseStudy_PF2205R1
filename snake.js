@@ -10,10 +10,11 @@ function snake(){
 
     //Vẽ Con rắn có kích thước boxScale 20 * 20
     this.drawSnake = function(){
-        ctx.drawImage(img1, this.x, this.y,);
+        
         for(let i=0; i<this.tail.length; i++){
             ctx.fillRect(this.tail[i].x, this.tail[i].y, boxScale, boxScale);
         }
+        ctx.drawImage(img1, this.x, this.y,);
     }
             
         

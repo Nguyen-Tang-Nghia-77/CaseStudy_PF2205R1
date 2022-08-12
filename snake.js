@@ -23,7 +23,7 @@ function snake(){
         for(let i=0;i<this.tail.length-1;i++){
             this.tail[i]=this.tail[i+1];
         }
-        this.tail[this.score-1] = {x:this.x, y:this.y};
+        this.tail[this.score+1] = {x:this.x, y:this.y};
         
 
         this.x += this.xVelocity ;
